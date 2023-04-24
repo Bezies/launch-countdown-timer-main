@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+main {
+    background-color: hsl(235, 16%, 14%);
+    height: 100vh;
+    background-image: url(images/bg-stars.svg), url(images/pattern-hills.svg);
+    background-position: center, bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100%, 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main h1 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-top: 100px;
+    font-size: 25px;
+}
+
+/* TIMER */
+
+.timer {
+    display: grid;
+    gap: 40px;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    grid-template-rows: repeat(2, minmax(150px, 1fr));
+    margin-top: 50px;
+}
+
+.numbers {
+    background-color: hsl(236, 21%, 26%);
+    border-radius: 10px;
+    color: hsl(345, 95%, 68%);
+    font-size: 80px;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.numbers::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: hsl(234, 17%, 12%);
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    z-index: 10;
+}
+
+.numbers::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: hsl(234, 17%, 12%);
+    border-radius: 50%;
+    position: absolute;
+    right: -10px;
+    z-index: 10;
+}
+
+.border {
+    height: 2px;
+    width: 100%;
+    background-color: hsl(234, 17%, 12%, 20%);
+    box-shadow: 1px 0 1px hsl(234, 17%, 12%, 20%);
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+}
+
+
+
+.text {
+    color: hsl(237, 18%, 59%);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 13px;
+    text-align: center;
+
+}
+
+
+
+
+/* RS  */
+
+.RS ul {
+    display: flex;
+    padding-bottom: 0px;
+    padding-left: 0;
+}
+
+.RS li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.RS i {
+    color: hsl(237, 18%, 59%);
+    font-size: 25px;
+}
+
+.RS i:hover {
+    color: hsl(345, 95%, 68%);
+}
+
+
+/* FOOTER  */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+/* MEDIA QUERIES  */
+
+@media screen and (max-width: 750px) {
+    
+    main h1 {
+        font-size: 20px;
+        margin-top: 0;
+    }
+
+    .timer {
+        gap: 30px;
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
+        grid-template-rows: repeat(2, minmax(100px, 1fr));
+    }
+
+    .numbers {
+        font-size: 60px;
+    }
+
+
+    .text {
+        font-size: 11px;
+    
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+
+    main {
+        background-color: hsl(235, 16%, 14%);
+        height: 100vh;
+        background-image: url(images/bg-stars.svg), url(images/pattern-hills.svg);
+        background-position: center, bottom left;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 100%, 1000px;
+
+    }
+    
+    main h1 {
+        font-size: 20px;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .timer {
+        gap: 10px;
+        grid-template-columns: repeat(4, minmax(60px, 1fr));
+        grid-template-rows: repeat(2, minmax(60px, 1fr));
+    }
+
+    .numbers {
+        font-size: 30px;
+    }
+
+
+    .text {
+        font-size: 8px;
+        letter-spacing: 5px;
+    
+    }
+
+    .numbers::before {
+        width: 10px;
+        height: 10px;
+        left: -5px;
+    }
+    
+    .numbers::after {
+        width: 10px;
+        height: 10px;
+        right: -5px;
+    }
+
+    .RS {
+        position: absolute;
+        bottom: 40px;
+    }
+}
