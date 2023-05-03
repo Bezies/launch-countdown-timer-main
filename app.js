@@ -37,7 +37,7 @@
 // }
 
 // let date1 = new Date();
-// let date2 = new Date(2023, 03, 30);
+// let date2 = new Date(2023, 05, 30);
 // diff = dateDiff(date1, date2)
 
 // window.location.reload();
